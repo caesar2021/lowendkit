@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Lowend Kit",
+  "description": "improve quality of life on Lowendtalk and Lowendspirit",
+  "version": "1.0.2",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [ "declarativeContent", "storage" ],
+  "host_permissions": ["https://lowendtalk.com/", "https://lowendspirit.com/"],
+  "background": {
+    "service_worker": "./background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://lowendtalk.com/*", "https://lowendspirit.com/*" ],
+      "js": [ "./thirdparty/browser-polyfill.js", "./content.js" ]
+    }
+  ]
+}

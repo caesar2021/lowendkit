@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="./thirdparty/browser-polyfill.js"></script>
+</head>
+<body style="min-width: 300px; min-height: 200px">
+<h1>Lowend Kit</h1>
+<p>Some QoL improvements for Lowendtalk and Lowendspirit.</p>
+<div>
+<form id="form">
+<div style="margin-bottom:20px">
+<fieldset>
+<legend>Ignore members</legend>
+<p>Remove threads and comments posted by a member.</p>
+<div>
+<input type="checkbox" name="hideMembers"/>
+<label>Enable</label>
+</div>
+<div>
+<textarea style="width: 100%" placeholder="first,second" name="hiddenMembers"></textarea>
+</div>
+</fieldset>
+<fieldset>
+<legend>Miscellaneous</legend>
+<div>
+<input type="checkbox" name="hideSignatures"/>
+<label>Remove signatures</label>
+</div>
+</fieldset>
+</div>
+<div>
+<button type="submit">SAVE</button>
+</div>
+</form>
+</div>
+<script src="./popup.js"></script>
+</body>
+</html>
